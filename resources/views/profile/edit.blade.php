@@ -1,4 +1,4 @@
-<x-app-layout>
+{{-- <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Profile') }}
@@ -26,4 +26,26 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> --}}
+<div class="edit-profile-container">
+    <h2>Edit Profile</h2>
+    <form class="edit-profile-form">
+        <div class="form-group">
+            <label for="full-name">Full Namnpm run deve</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email address" />
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="000-000-0000" />
+        </div>
+        <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea id="bio" placeholder="Write a little about yourself"></textarea>
+        </div>
+        <button type="submit" class="save-btn">Save Changes</button>
+    </form>
+</div>

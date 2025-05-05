@@ -1,3 +1,368 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Desktop Layout */
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+.sidebar {
+    width: 250px;
+    background-color: #1c1c1c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 15px;
+    overflow: hidden; /* Prevents horizontal scrolling */
+}
+.logo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #58a6ff; /* Highlight color */
+}
+
+.nav {
+    height: 100%; /* Full height of the sidebar */
+    overflow: hidden; /* Prevents any extra overflow */
+}
+
+.nav ul {
+    height: calc(
+        100vh - 64px
+    ); /* Adjust this value based on your sidebar's padding/margin */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: thin; /* For Firefox */
+}
+
+/* Ensure scrollbar sticks to the right edge */
+.nav ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+.nav ul::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.nav ul::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+.nav ul li {
+    margin: 15px 0;
+}
+
+.nav ul li a {
+    /* color: white; */
+    color: #58a6ff; /* Highlight color */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/*--------------------------------------- */
+
+.sidebar .nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .nav ul li a i img {
+    font-size: 16px;
+    color: #58a6ff; /* Icon color */
+}
+
+.sidebar .nav ul li a:hover i {
+    color: #ffffff; /* Change icon color on hover */
+}
+/*--------------------------------------- */
+
+.main-content {
+    flex-grow: 1;
+    padding: 7px;
+    background-color: #f5f5f5;
+}
+
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 28px 40px; */
+    padding: 26px 36px;
+    background-color: none;
+    border-bottom: 1px solid #ddd;
+    width: 95.5%;
+    height: 10.8px;
+}
+/* Search bar container */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #e3e7ec;
+    border-radius: 20px;
+    background-color: #f3f7f9;
+    gap: 10px;
+}
+
+/* Search icon styling */
+.search-icon i{
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) brightness(0%);
+}
+
+/* Search input styling */
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Placeholder color */
+.search-bar input::placeholder {
+    color: #999;
+}
+
+/* User info section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: Hug (172px) px;
+    height: Hug (40px) px;
+    gap: 16px;
+}
+
+/* Icon styling */
+/* Icon styling with color overlay using filter */
+.icon i{
+    width: 28px;
+    height: 28px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f3f7f9; /* Light gray background */
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Avatar container */
+.avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* User avatar image */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Dropdown icon */
+.dropdown-icon i{
+    width: 8px;
+    height: 4.8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-top: 7px;
+    height: Fixed (177px) px;
+    /* padding: 10px  0px; */
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    position: relative;
+    display: none; /* Hide slides by default */
+    width: 100%;
+    height: 126px;
+    background-color: #eaeff4;
+    /* background-color:black; */
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+}
+
+.carousel-slide.active {
+    margin-top: 25px;
+    position: relative;
+    display: flex; /* Show only the active slide */
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 20px 30px; */
+}
+
+.welcome-text {
+    max-width: 60%;
+    text-align: center; /* Center the text within the welcome-text div */
+}
+
+.welcome-text h1 {
+    width: 236.57px;
+    height: 51px;
+    font-size: 2em; /* Increase the font size of the first line */
+    margin-left: 15px; /* Remove bottom margin for better spacing */
+    font-family: Baloo Bhai;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 51.01px;
+    text-align: center;
+}
+.welcome-text p {
+    width: 263.21px;
+    height: 30px; /* Adjust font size as needed */
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2px;
+    text-align: center;
+}
+.welcome-illustration {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    max-width: 30%;
+    height: 216.28px;
+    /* max-width: 16px%; */
+    z-index: 1;
+}
+
+.welcome-illustration img {
+    width: 90%;
+    height: 100%;
+    /* height: auto; */
+    /* width: 198.16px;*/
+    border-radius: 10px;
+}
+
+/* Dots for navigation */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 35px;
+    height: 6px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 25%;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    /* background-color: #ffcc00; */
+    background-color: #58a6ff; /* Highlight color */
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 30px;
+
+    /* position: absolute;
+top: 70%;
+left: 60%;
+transform: translate(-50%, -50%);   */
+    /* width: Fixed (1,132px)px; */
+}
+.feature-card {
+    width: 250px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.icon-container,
+#gaspay {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+}
+
+.icon,
+#gaspay {
+    width: 30px;
+    height: 30px;
+}
+
+#gaspay {
+    color: #141b34;
+}
+
+.feature-title {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin: 0;
+}

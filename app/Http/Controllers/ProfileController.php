@@ -11,6 +11,29 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+
+     // Show Profile Page
+     public function showProfile()
+     {
+         // Fetch user data (replace this with your actual logic)
+         $user = [
+             'full_name' => 'Randolph Turner',
+             'email' => 'Molly8@hotmail.com',
+             'phone' => '726-993-9812',
+             'user_type' => 'Student',
+             'bio' => 'Write a little about yourself',
+             'location' => 'Nigeria',
+             'date_joined' => 'Fri Mar 22 2024 15:09:14',
+         ];
+
+         return view('profile', compact('user'));
+     }
+
+     // Show Edit Profile Page
+     public function showEditProfile()
+     {
+         return view('edit-profile');
+     }
     /**
      * Display the user's profile form.
      */

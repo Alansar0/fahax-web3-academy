@@ -1,0 +1,605 @@
+/* Set the base font-size so 1rem = 16px */
+html {
+    font-size: 16px;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 15.625rem; /* 250px */
+    background-color: #1c1c1c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem; /* 20px */
+    margin: 0.75rem; /* 12px */
+    border-radius: 0.9375rem; /* 15px */
+    z-index: 5;
+    overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.logo img {
+    width: 24px; /* Adjust logo size */
+    height: 24px;
+    background-color: none;
+}
+
+/* Navigation */
+.nav {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav ul {
+    height: calc(100vh - 4rem); /* 64px converted to 4rem */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+nav ul::-webkit-scrollbar {
+    display: none;
+}
+/* Ensure scrollbar sticks to the right edge */
+
+.nav ul::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 0.625rem; /* 10px */
+}
+
+.nav ul::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+.nav ul li {
+    margin: 0.9375rem 0; /* 15px vertical */
+}
+.nav ul li:last-child {
+    padding-bottom: 5rem;
+}
+
+.nav ul li a {
+    color: #58a6ff;
+    text-decoration: none;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    display: block;
+}
+
+.nav ul li a:hover {
+    background-color: #333;
+    border-radius: 0.3125rem; /* 5px */
+}
+
+/* Sidebar navigation links */
+.sidebar .nav ul li a{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* 10px */
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .nav ul li a i img,
+.earn-container-leftside .nav ul a i
+{
+    font-size: 1rem; /* 16px */
+    color:white;
+}
+
+.sidebar .nav ul li a:hover i,
+.earn-container-leftside .nav ul li a:hover i {
+    color: #ffffff;
+
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 0.4375rem; /* 7px */
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    scrollbar-width: 0;
+}
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.625rem 2.25rem; /* 26px and 36px respectively */
+    background-color: #fff;
+    border-bottom: 0.0625rem solid #ddd; /* 1px */
+    width: 95.5%;
+    height: 0.675rem; /* 10.8px approx */
+    position: fixed;
+    z-index: 3;
+}
+#tab-content {
+    margin-top: 6.5%;
+}
+
+#desktop-view {
+    display: block;
+}
+
+.bottom-nav {
+    display: none;
+}
+
+#mobile-view {
+    display: none;
+}
+
+/* Search bar container */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 18.75rem; /* 300px */
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    border: 0.0625rem solid #e3e7ec; /* 1px */
+    border-radius: 1.25rem; /* 20px */
+    background-color: #f3f7f9;
+    gap: 0.625rem; /* 10px */
+}
+
+/* Search bar input */
+.search-bar input {
+    width: 18.75rem; /* 300px */
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    border: 0.0625rem solid #ccc; /* 1px */
+    border-radius: 1.25rem; /* 20px */
+    outline: none;
+}
+
+/* Search icon styling */
+.search-icon img {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+    filter: invert(100%) brightness(0%);
+}
+
+/* Search input additional styling */
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-size: 0.875rem; /* 14px */
+    color: #555;
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+/* User info section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem; /* 15px */
+    width: 10.75rem; /* 172px */
+    height: 2.5rem; /* 40px */
+    /* Ensure only one gap declaration is used */
+}
+
+/* Icon styling */
+.icon img {
+    width: 1.75rem; /* 28px */
+    height: 1.75rem; /* 28px */
+    filter: invert(100%) brightness(0%);
+}
+
+.icon {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f3f7f9;
+    padding: 0.3125rem; /* 5px */
+    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.1); /* 5px */
+    cursor: pointer;
+}
+
+/* Avatar container */
+.avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem; /* 5px */
+}
+
+/* Avatar image */
+.avatar {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    border-radius: 50%;
+}
+
+/* Dropdown icon */
+.dropdown-icon img {
+    width: 0.5rem; /* 8px */
+    height: 0.3rem; /* 4.8px approx */
+    font-size: 0.875rem; /* 14px */
+    color: #555;
+    cursor: pointer;
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.125rem; /* 18px */
+    margin-top: 0.4375rem; /* 7px */
+    height: 11.0625rem; /* 177px approx */
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    position: relative;
+    display: none; /* Hide slides by default */
+    width: 100%;
+    height: 7.875rem; /* 126px */
+    background-color: #eaeff4;
+    border-radius: 1.25rem; /* 20px */
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-top: 1.5625rem; /* 25px */
+}
+
+.carousel-slide.active {
+    margin-top: 1.5625rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Welcome text */
+.welcome-text {
+    max-width: 60%;
+    text-align: center;
+}
+
+.welcome-text h1,
+.welcome-text p {
+    width: 20rem;
+    font-family: Inter;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400;
+    line-height: 1.5625rem; /* 25px */
+    text-align: left;
+    margin-left: 0.5rem; /* 8px */
+}
+
+.welcome-text h1 {
+    font-family: Baloo Bhai;
+    font-size: 1.875rem; /* 30px */
+}
+
+/* Welcome illustration */
+.welcome-illustration {
+    position: absolute;
+    top: -1.5625rem; /* -25px */
+    right: 1.25rem; /* 20px */
+    max-width: 30%;
+    height: 13.52rem; /* 216.28px approx */
+    z-index: 1;
+}
+
+.welcome-illustration img {
+    width: 90%;
+    height: 100%;
+    border-radius: 0.625rem; /* 10px */
+}
+
+/* Carousel dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.625rem; /* 10px */
+}
+
+.dot {
+    width: 2.1875rem; /* 35px */
+    height: 0.375rem; /* 6px */
+    margin: 0 0.3125rem; /* 5px */
+    background-color: #ccc;
+    border-radius: 25%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #58a6ff;
+}
+
+/* Features grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.125rem; /* 18px */
+    margin: 1.35rem; /* 30px */
+}
+
+/* Feature card */
+.feature-card {
+    width: 15.625rem; /* 250px */
+    padding: 1.25rem; /* 20px */
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    border-radius: 0.9375rem; /* 15px */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.feature-card i {
+    font-size: 1.875rem; /* 30px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.feature-card:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+    box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.3);
+}
+
+/* Icon container */
+.icon-container {
+    width: 3.75rem; /* 60px */
+    height: 3.75rem; /* 60px */
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0.625rem auto; /* bottom margin 10px */
+}
+
+.icon-container img,
+.icon-container i {
+    width: 1.875rem; /* 30px */
+    height: 1.875rem; /* 30px */
+    object-fit: contain;
+}
+
+/* Additional Font Awesome icon styling */
+.icon-container i {
+    font-size: 2.25rem; /* 36px */
+    color: #141b34;
+    margin-left: -0.25rem; /* -4px */
+}
+
+/* Feature title */
+.feature-title {
+    margin: 0.625rem 0 0.3125rem 0; /* 10px 0 5px 0 */
+    font-size: 1.125rem; /* 18px */
+    font-weight: bold;
+}
+
+/* Feature description */
+.feature-description {
+    font-size: 0.875rem; /* 14px */
+    color: #b0b0b0;
+    margin: 0;
+}
+
+/* Mobile View (max-width: 48rem = 768px) */
+@media (max-width: 48rem) {
+    .container {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .main-content {
+        max-width: 100%;
+        background-color: #f5f5f5;
+    }
+
+    /* Header container */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0.625rem 0.625rem 1rem 0.625rem; /* 10px */
+    }
+
+    #mobile-view {
+        display: block;
+    }
+
+    #desktop-view {
+        display: none;
+    }
+
+    .menu-icon {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .welcome {
+        background: #eef2f7;
+        padding: 1.25rem; /* 20px */
+        border-radius: 0.625rem; /* 10px */
+        text-align: center;
+        margin-bottom: 1.25rem; /* 20px */
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem; /* 20px */
+        margin: 7% 2%; /* percentages remain as is */
+    }
+
+    .feature-card {
+        width: 80%;
+        background: #2c2c44;
+        color: white;
+        padding: 0.9375rem; /* 15px */
+        border-radius: 0.625rem; /* 10px */
+        text-align: center;
+    }
+
+    .feature-card i {
+        font-size: 1.875rem; /* 30px */
+        margin-bottom: 0.625rem; /* 10px */
+    }
+
+    .carousel-container {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 1.125rem; /* 18px */
+        overflow: hidden;
+    }
+
+    .welcome-illustration {
+        position: absolute;
+        top: -0.625rem; /* -10px */
+        right: 0.625rem; /* 10px */
+        max-width: 35%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .welcome-illustration img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0.625rem; /* 10px */
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: calc(100% + 20px); /* Compensate for margins */
+        margin-left: -10px;
+        background: #2c2c44;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2px 0;
+        z-index: 2;
+        border-top-left-radius: 1.5rem; /* Adjust as needed */
+        border-top-right-radius: 1.5rem; /* Adjust as needed */
+    }
+
+    .bottom-nav .nav-item,
+    .bottom-nav .center-button {
+        text-align: center;
+        cursor: pointer;
+        color: white; /* Adjust text color */
+    }
+
+    /* Icons and labels */
+    .nav-item {
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .nav-item a{
+        color: white;
+        text-decoration-line: none;
+    }
+
+    .nav-item i {
+        font-size: 35px;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    /* Highlighted central button */
+    .center-button {
+        position: relative;
+        top: -20px;
+        background: #2c2c44; /* Purple */
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        border: 4px solid white;
+        padding:0.3rem;
+
+    }
+
+    /* Mobile Sidebar */
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        background: #2c2c44;
+        color: white;
+        position: fixed;
+        top: 0;
+        right: -310px;
+        transition: right 0.3s ease;
+        z-index: 4; /* Higher than bottom-nav */
+        padding: 20px;
+        margin: 0;
+        border-top-right-radius: 0;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        scrollbar-width: none;
+    }
+    .nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav ul li {
+        margin: 15px 0;
+    }
+
+    .nav ul li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

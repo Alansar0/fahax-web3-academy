@@ -1,36 +1,58 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Parents/Home</title>
+    <!-- Material Icons -->
+    <!-- Replace Material Icons CDN -->
+    <link rel="stylesheet" href="{{ asset('css/material-icons.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <!-- Replace Font Awesome CDN -->
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- Scripts -->
+    {{-- @vite(['resources/css/app.css']) --}}
+</head>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        @include('layouts.side_bar')
+        <!-- Main Content -->
+        <x-main-content></x-main-content>
+    </div>
+    <!-- JavaScript -->
+    {{-- @vite(['resources/js/app.js', 'resources/js/carousel.js', 'resources/js/tabs.js']) --}}
+    <script src="{{ asset('js/carousel.js') }}"></script>
+    <script src="{{ asset('js/tabs.js') }}"></script>
+    <script src="{{ asset('js/switchView.js') }}"></script>
+    <!-- JavaScript for Sidebar -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const toggleButton = document.getElementById("sidebarToggle");
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
+        toggleButton.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
+        });
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+        document.addEventListener("click", function (event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+</script>
+</body>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
 </html>

@@ -1,4 +1,285 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahax Connect - Master Cryptocurrency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1920x600?text=Crypto+Education+Background') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero .cta-button {
+      background-color: #ff5722;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: white;
+    }
+
+    .feature-tile {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-tile i {
+      font-size: 40px;
+      color: #ff5722;
+      margin-bottom: 15px;
+    }
+
+    .feature-tile h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature-tile p {
+      font-size: 14px;
+    }
+
+    /* Community Section */
+    .community {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .community h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .community p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .community .testimonial {
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    /* Education Section */
+    .education {
+      padding: 50px 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .education h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .course {
+      display: inline-block;
+      margin: 20px;
+      text-align: left;
+    }
+
+    .course img {
+      width: 200px;
+      height: 150px;
+      border-radius: 10px;
+    }
+
+    .course h3 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-tile {
+        width: 80%;
+      }
+
+      .education .course {
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Fahax Connect</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Tools</a>
+      <a href="#">Community</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Master Cryptocurrency with Fahax Connect</h1>
+    <p>Learn, Earn, and Engage in the Crypto World</p>
+    <p>Access expert-led courses, practical tools, and a supportive community to enhance your crypto journey.</p>
+    <button class="cta-button">Start Learning Now</button>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>What You Can Do with Fahax Connect</h2>
+    <div class="feature-tile">
+      <i class="material-icons">calculate</i>
+      <h3>Crypto Profit Calculator</h3>
+      <p>Track Your Gains and Losses</p>
+    </div>
+    <div class="feature-tile">
+      <i class="material-icons">local_gas_station</i>
+      <h3>GasPay</h3>
+      <p>Optimize Your Gas Fees for Every Transaction</p>
+    </div>
+    <div class="feature-tile">
+      <i class="material-icons">explore</i>
+      <h3>Blockchain Explorer</h3>
+      <p>Dive Deep into Transaction Data</p>
+    </div>
+    <div class="feature-tile">
+      <i class="material-icons">lightbulb</i>
+      <h3>Expert Tips</h3>
+      <p>Strategies for Crypto Success</p>
+    </div>
+    <div class="feature-tile">
+      <i class="material-icons">eco</i>
+      <h3>Ecosystem</h3>
+      <p>Explore the Latest Trends and Projects in Crypto</p>
+    </div>
+    <div class="feature-tile">
+      <i class="material-icons">group</i>
+      <h3>Community</h3>
+      <p>Join a Vibrant Community of Crypto Enthusiasts</p>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="community">
+    <h2>Join 10,000+ Users Learning Crypto</h2>
+    <p class="testimonial">"Fahax Connect helped me understand crypto trading better!" - Alex, Crypto Enthusiast</p>
+    <p class="testimonial">"The courses are easy to follow and incredibly insightful." - Jamie, Beginner Learner</p>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education">
+    <h2>Popular Courses</h2>
+    <div class="course">
+      <img src="https://via.placeholder.com/200x150?text=Course+1" alt="Course 1">
+      <h3>Beginner’s Guide to Crypto</h3>
+    </div>
+    <div class="course">
+      <img src="https://via.placeholder.com/200x150?text=Course+2" alt="Course 2">
+      <h3>Advanced Blockchain Concepts</h3>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="#">Terms of Service</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+    <p>Follow us on social media: <a href="#">X</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -173,4 +454,4 @@
             </div>
         </div>
     </body>
-</html>
+</html> --}}
